@@ -1,0 +1,792 @@
+<template>
+  <div class="relative z-[2] w-full lg:min-h-[421px]">
+    <div class="mx-auto w-full max-w-[550px] lg:mx-0">
+      <div class="mb-2 flex overflow-auto border border-beige-200 bg-gray-table-dark">
+        <button
+          class="btn-selector2 bg-gray-table-dark transition-colors hover:bg-gray-table-light bg-gray-table-dark2"
+        >
+          <span class="text-xs">All</span></button
+        ><button
+          class="btn-selector2 bg-gray-table-dark transition-colors hover:bg-gray-table-light false"
+        >
+          <span class="text-xs">Crypto</span></button
+        ><button
+          class="btn-selector2 bg-gray-table-dark transition-colors hover:bg-gray-table-light false"
+        >
+          <span class="text-xs">Equities</span></button
+        ><button
+          class="btn-selector2 bg-gray-table-dark transition-colors hover:bg-gray-table-light false"
+        >
+          <span class="text-xs">Forex</span></button
+        ><button
+          class="btn-selector2 bg-gray-table-dark transition-colors hover:bg-gray-table-light false"
+        >
+          <span class="text-xs">Commodities</span>
+        </button>
+      </div>
+      <div class="relative z-[3]">
+        <div
+          class="relative w-full cursor-default overflow-hidden border border-b-0 border-beige-100 bg-gray-table-dark"
+        >
+          <input
+            class="w-full rounded-none border-none bg-gray-table-dark py-[13px] px-20 text-base leading-5 text-light outline-none"
+            placeholder="Search"
+            id="headlessui-combobox-input-:Rmaham:"
+            role="combobox"
+            type="text"
+            aria-expanded="false"
+            data-headlessui-state=""
+          /><button
+            class="absolute inset-y-0 left-0 flex items-center pl-6 bg-gray-table-dark hover:bg-gray-table-light"
+            id="headlessui-combobox-button-:R16aham:"
+            type="button"
+            tabindex="-1"
+            aria-haspopup="true"
+            aria-expanded="false"
+            data-headlessui-state=""
+          >
+            <svg
+              width="15"
+              height="15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+            >
+              <path
+                d="M13.715 5.939c0 3-2.452 5.438-5.486 5.438S2.742 8.938 2.742 5.939C2.742 2.939 5.195.5 8.23.5c3.034 0 5.486 2.439 5.486 5.439Z"
+                stroke="#E6DAFE"
+              ></path>
+              <path
+                transform="scale(-1.00402 -.99596) rotate(-45 -13.8 .213)"
+                stroke="#E6DAFE"
+                d="M0-.5h5.929"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <table class="w-full border border-beige-100 bg-gray-table-dark">
+        <thead>
+          <tr class="bg-gray-table-light">
+            <th
+              class="py-3.5 pl-4 text-left font-body text-xs font-light tracking-subtitle opacity-40 md:pl-6"
+            >
+              SYMBOL
+            </th>
+            <th
+              class="px-4 text-right font-body text-xs font-light tracking-subtitle opacity-40 md:px-5 xl:px-8"
+            >
+              PRICE
+            </th>
+            <th
+              class="pr-4 text-right align-middle font-body text-xs font-light leading-none tracking-subtitle opacity-40 md:pr-5 xl:pr-8"
+            >
+              7D
+            </th>
+            <th
+              class="hidden pr-3 text-center align-middle font-body text-xs font-light tracking-subtitle opacity-40 sm:table-cell md:pr-5"
+            >
+              LAST 7 DAYS
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="group cursor-pointer border-y border-beige-100 font-mono transition-colors hover:bg-gray-table-light"
+          >
+            <td class="flex items-center py-3 pl-4 font-body md:pl-5">
+              <div class="relative mr-2.5 h-[20px] w-[20px]">
+                <span
+                  style="
+                    box-sizing: border-box;
+                    display: block;
+                    overflow: hidden;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0px;
+                    margin: 0px;
+                    padding: 0px;
+                    position: absolute;
+                    inset: 0px;
+                  "
+                  ><img
+                    alt="Crypto.BTC/USD"
+                    sizes="100vw"
+                    srcset="
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-btc-usd.inline.svg&amp;w=640&amp;q=75   640w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-btc-usd.inline.svg&amp;w=750&amp;q=75   750w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-btc-usd.inline.svg&amp;w=828&amp;q=75   828w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-btc-usd.inline.svg&amp;w=1080&amp;q=75 1080w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-btc-usd.inline.svg&amp;w=1200&amp;q=75 1200w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-btc-usd.inline.svg&amp;w=1920&amp;q=75 1920w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-btc-usd.inline.svg&amp;w=2048&amp;q=75 2048w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-btc-usd.inline.svg&amp;w=3840&amp;q=75 3840w
+                    "
+                    src="https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-btc-usd.inline.svg&amp;w=3840&amp;q=75"
+                    decoding="async"
+                    data-nimg="fill"
+                    style="
+                      position: absolute;
+                      inset: 0px;
+                      box-sizing: border-box;
+                      padding: 0px;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0px;
+                      height: 0px;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    "
+                /></span>
+              </div>
+              <div><span class="min-w-[72px]">BTC/USD</span></div>
+              <svg
+                width="14"
+                height="4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                class="ml-2 opacity-0 group-hover:opacity-100"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.772 0 14 2 9.772 4V2.346H0v-.692h9.772V0Z"
+                  fill="#E6DAFE"
+                ></path>
+              </svg>
+            </td>
+            <td
+              class="py-3 px-4 text-right align-middle font-light leading-none md:px-5 xl:px-8"
+            >
+              <span class="leading-none total-cap">$69,357.97</span>
+            </td>
+            <td
+              class="py-3 pr-4 text-right align-middle text-xs md:pr-5 xl:pr-8"
+            >
+              <span
+                class="inline-flex items-center leading-none"
+                style="color: rgb(21, 174, 110)"
+                ><svg
+                  width="9"
+                  height="8"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline"
+                >
+                  <path
+                    d="M3.735 1.306a1 1 0 0 1 1.682 0L8.412 5.96A1 1 0 0 1 7.57 7.5H1.58A1 1 0 0 1 .74 5.959l2.995-4.653Z"
+                  ></path>
+                </svg><span class="pl-1 leading-none">2.68%</span></span
+              >
+            </td>
+            <td class="hidden pr-3 sm:table-cell md:pr-5">
+              <div
+                class="recharts-wrapper"
+                style="
+                  position: relative;
+                  cursor: pointer;
+                  width: 87px;
+                  height: 40px;
+                  margin: 0px auto;
+                "
+              >
+                <svg
+                  class="recharts-surface"
+                  width="87"
+                  height="40"
+                  viewBox="0 0 87 40"
+                  version="1.1"
+                >
+                  <defs>
+                    <clipPath id="recharts1-clip">
+                      <rect x="5" y="5" height="30" width="77"></rect>
+                    </clipPath>
+                  </defs>
+                  <g class="recharts-layer recharts-line">
+                    <path
+                      stroke="#15AE6E"
+                      stroke-width="1"
+                      fill="none"
+                      points="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+                      width="77"
+                      height="30"
+                      class="recharts-curve recharts-line-curve"
+                      type="monotone"
+                      d="M5,32.81849366512373C5.153692614770459,32.77180413225972,5.307385229540919,32.725114599395695,5.461077844311378,32.59355778586473C5.614770459081837,32.46200097233377,5.7684630738522955,32.02915278393795,5.922155688622754,32.02915278393795C6.075848303393213,32.02915278393795,6.229540918163673,33.21670751906356,6.383233532934132,33.6434306643884C6.536926147704591,34.07015380971323,6.69061876247505,34.589491655886974,6.844311377245509,34.589491655886974C6.998003992015968,34.589491655886974,7.151696606786428,33.467302772972864,7.3053892215568865,33.467302772972864C7.4590818363273454,33.467302772972864,7.612774451097805,34.56191377601018,7.766467065868264,34.56191377601018C7.920159680638723,34.56191377601018,8.073852295409182,33.70113768175163,8.227544910179642,33.70113768175163C8.3812375249501,33.70113768175163,8.53493013972056,33.77479005917575,8.688622754491018,33.77479005917575C8.842315369261478,33.77479005917575,8.996007984031936,33.06373836487926,9.149700598802395,32.90017035517276C9.303393213572855,32.73660234546626,9.457085828343313,32.654818340613005,9.610778443113773,32.654818340613005C9.764471057884231,32.654818340613005,9.918163672654691,32.693874854925944,10.071856287425149,32.77198788355183C10.225548902195609,32.850100912177716,10.379241516966069,34.16829117336419,10.532934131736528,34.16829117336419C10.686626746506986,34.16829117336419,10.840319361277446,33.62495429479397,10.994011976047904,33.57445559258207C11.147704590818364,33.523956890370165,11.301397205588822,33.54920624147612,11.455089820359282,33.49870753926422C11.608782435129742,33.44820883705231,11.7624750499002,32.2465462547872,11.91616766467066,32.03130920406044C12.069860279441118,31.816072153333682,12.223552894211577,31.708453627970304,12.377245508982035,31.708453627970304C12.530938123752495,31.708453627970304,12.684630738522955,31.721473141010513,12.838323353293415,31.747512167090935C12.992015968063873,31.773551193171357,13.145708582834333,32.02832261281096,13.29940119760479,32.11076265533531C13.45309381237525,32.193202697859654,13.606786427145709,32.15455924430254,13.760479041916168,32.242152422237005C13.914171656686628,32.32974560017147,14.067864271457086,32.86387972807801,14.221556886227546,33.06529746675198C14.375249500998004,33.26671520542594,14.528942115768464,33.355568826108126,14.682634730538922,33.45065885428079C14.836327345309382,33.54574888245345,14.99001996007984,33.55493644705997,15.1437125748503,33.635837635787965C15.29740518962076,33.71673882451596,15.451097804391217,33.93606598664872,15.604790419161677,33.93606598664872C15.758483033932137,33.93606598664872,15.912175648702597,33.17407013246262,16.065868263473057,32.744507194441226C16.219560878243517,32.314944256419835,16.373253493013973,31.358688358520382,16.526946107784433,31.358688358520382C16.680638722554892,31.358688358520382,16.83433133732535,31.715925168113188,16.98802395209581,31.715925168113188C17.14171656686627,31.715925168113188,17.295409181636725,31.01379275141276,17.449101796407184,30.785384327073828C17.602794411177644,30.556975902734894,17.756487025948104,30.48568242619599,17.910179640718564,30.345474622079596C18.063872255489024,30.205266817963203,18.217564870259483,29.94413750237547,18.371257485029943,29.94413750237547C18.524950099800403,29.94413750237547,18.67864271457086,30.184684648436978,18.83233532934132,30.184684648436978C18.98602794411178,30.184684648436978,19.139720558882235,29.947539179188503,19.293413173652695,29.61873066867568C19.447105788423155,29.28992215816286,19.60079840319361,29.082616278910223,19.75449101796407,28.21183358536005C19.90818363273453,27.34105089180987,20.06187624750499,24.394034507374617,20.21556886227545,24.394034507374617C20.36926147704591,24.394034507374617,20.52295409181637,25.84329461585775,20.67664670658683,25.84329461585775C20.83033932135729,25.84329461585775,20.984031936127746,24.124759390704416,21.137724550898206,23.620632911826824C21.291417165668665,23.116506432949233,21.44510978043912,22.818535742592204,21.59880239520958,22.818535742592204C21.75249500998004,22.818535742592204,21.906187624750498,23.303193696138322,22.059880239520957,23.52310805248291C22.213572854291417,23.743022408827503,22.367265469061877,24.138021880659743,22.520958083832337,24.138021880659743C22.674650698602797,24.138021880659743,22.828343313373253,23.55487728414707,22.982035928143713,23.55487728414707C23.135728542914173,23.55487728414707,23.289421157684632,24.251285569686615,23.443113772455092,24.251285569686615C23.596806387225552,24.251285569686615,23.75049900199601,23.885352211336738,23.904191616766468,23.679220720507644C24.057884231536928,23.47308922967855,24.211576846307384,23.01449662471204,24.365269461077844,23.01449662471204C24.518962075848304,23.01449662471204,24.672654690618764,23.722106146042833,24.826347305389223,23.722106146042833C24.980039920159683,23.722106146042833,25.13373253493014,23.670898761161606,25.2874251497006,23.670898761161606C25.44111776447106,23.670898761161606,25.59481037924152,23.86926916435726,25.74850299401198,23.926024522135904C25.90219560878244,23.98277987991455,26.055888223552895,24.01143090783347,26.209580838323355,24.01143090783347C26.363273453093814,24.01143090783347,26.51696606786427,23.51499869793762,26.67065868263473,23.51499869793762C26.82435129740519,23.51499869793762,26.97804391217565,23.648484140733135,27.13173652694611,23.648484140733135C27.28542914171657,23.648484140733135,27.439121756487026,22.591418133115386,27.592814371257486,21.97242937958964C27.746506986027946,21.353440626063893,27.900199600798405,19.934551619578656,28.053892215568865,19.934551619578656C28.207584830339325,19.934551619578656,28.36127744510978,20.32421572331437,28.51497005988024,20.82162996490918C28.6686626746507,21.319044206503992,28.822355289421157,22.368071727843454,28.976047904191617,22.919037069147517C29.129740518962077,23.470002410451585,29.283433133732537,24.09427591188319,29.437125748502996,24.127422012733575C29.590818363273456,24.16056811358396,29.744510978043913,24.143995063158766,29.898203592814372,24.17714116400915C30.051896207584832,24.210287264859534,30.20558882235529,24.282228679839026,30.35928143712575,24.36429413295242C30.512974051896208,24.446359586065814,30.666666666666668,24.66953388268952,30.820359281437128,24.66953388268952C30.974051896207587,24.66953388268952,31.127744510978044,23.678370301304398,31.281437125748504,23.678370301304398C31.435129740518963,23.678370301304398,31.588822355289423,24.233329575652295,31.742514970059883,24.233329575652295C31.896207584830343,24.233329575652295,32.0499001996008,22.651063903781267,32.20359281437126,22.651063903781267C32.35728542914172,22.651063903781267,32.51097804391218,24.182243679228613,32.66467065868264,24.182243679228613C32.818363273453095,24.182243679228613,32.97205588822356,24.073217912564637,33.125748502994014,23.987193960540882C33.27944111776447,23.901170008517127,33.433133732534934,23.880162629389282,33.58682634730539,23.666099967086087C33.740518962075846,23.45203730478289,33.89421157684631,22.708092610589564,34.047904191616766,22.350319226975653C34.20159680638722,21.992545843361743,34.355289421157686,22.07336603978464,34.50898203592814,21.519459665402614C34.6626746506986,20.965553291020587,34.81636726546906,19.708664080735005,34.97005988023952,18.18053164076595C35.12375249500998,16.652399200796868,35.27744510978044,14.207565479917545,35.4311377245509,12.350665025588164C35.58483033932136,10.493764571258811,35.73852295409182,7.039128914789742,35.89221556886228,7.039128914789742C36.04590818363274,7.039128914789742,36.199600798403196,7.241650173620268,36.35329341317366,7.241650173620268C36.506986027944116,7.241650173620268,36.66067864271458,5.804360727826767,36.814371257485035,5.658655571003627C36.96806387225549,5.512950414180487,37.121756487025955,5.440097835768917,37.27544910179641,5.440097835768917C37.42914171656687,5.440097835768917,37.58283433133733,6.756567010472542,37.73652694610779,7.481954342766519C37.89021956087824,8.207341675060496,38.04391217564871,9.792421829532776,38.19760479041916,9.792421829532776C38.35129740518962,9.792421829532776,38.50499001996008,8.961501523731028,38.65868263473054,8.885449749269172C38.812375249500995,8.809397974807316,38.96606786427146,8.771372087576388,39.119760479041915,8.771372087576388C39.27345309381238,8.771372087576388,39.427145708582835,10.240866098673882,39.5808383233533,10.240866098673882C39.734530938123754,10.240866098673882,39.88822355289422,8.414803464500428,40.041916167664674,8.414803464500428C40.19560878243513,8.414803464500428,40.34930139720559,8.571472954622507,40.50299401197605,8.825738172355415C40.656686626746506,9.080003390088322,40.81037924151697,9.940394770897871,40.964071856287426,9.940394770897871C41.11776447105788,9.940394770897871,41.271457085828345,9.26169950247747,41.4251497005988,9.26169950247747C41.578842315369265,9.26169950247747,41.73253493013972,9.570705394400354,41.886227544910184,9.570705394400354C42.03992015968064,9.570705394400354,42.193612774451104,9.07910235069445,42.34730538922156,9.07910235069445C42.50099800399202,9.07910235069445,42.65469061876248,9.951231541316393,42.808383233532936,10.542637352946333C42.96207584830339,11.134043164576273,43.115768463073856,12.627537220474089,43.26946107784431,12.627537220474089C43.42315369261477,12.627537220474089,43.57684630738523,11.244269642162976,43.73053892215569,11.244269642162976C43.88423153692615,11.244269642162976,44.03792415169661,11.281131265008513,44.19161676646707,11.354854510699585C44.34530938123753,11.428577756390657,44.49900199600799,12.429187065354725,44.65269461077845,12.700430295038172C44.8063872255489,12.97167352472162,44.960079840319366,12.907922456592448,45.11377245508982,13.107295139563345C45.26746506986028,13.30666782253424,45.42115768463074,13.404445782831441,45.5748502994012,13.896666392863555C45.728542914171655,14.388887002895668,45.88223552894212,15.200201096447344,46.035928143712574,16.06061879975603C46.18962075848304,16.921036503064727,46.343313373253494,19.05917261271571,46.49700598802396,19.05917261271571C46.650698602794414,19.05917261271571,46.80439121756488,16.43960204326046,46.95808383233533,16.43960204326046C47.11177644710579,16.43960204326046,47.26546906187625,17.065935786452357,47.41916167664671,17.065935786452357C47.572854291417165,17.065935786452357,47.72654690618763,15.23954310863565,47.880239520958085,15.186144881902196C48.03393213572854,15.132746655168743,48.187624750499005,15.106047541802017,48.34131736526946,15.106047541802017C48.495009980039924,15.106047541802017,48.64870259481038,15.567169131494422,48.802395209580844,16.48941231087923C48.9560878243513,17.411655490264028,49.109780439121764,19.74636599874569,49.26347305389222,21.240339934050997C49.417165668662676,22.734313869356303,49.57085828343314,24.632965856949912,49.724550898203596,25.45325592271106C49.87824351297405,26.27354598847221,50.031936127744515,26.333804263445177,50.18562874251497,26.683691021352786C50.33932135728543,27.033577779260394,50.49301397205589,27.552576470156716,50.64670658682635,27.552576470156716C50.80039920159681,27.552576470156716,50.95409181636727,26.79225108226255,51.10778443113773,26.70710792155647C51.26147704590819,26.621964760850393,51.41516966067865,26.664536341203434,51.568862275449106,26.579393180497355C51.72255489021956,26.494250019791277,51.876247504990026,25.58596181457019,52.02994011976048,25.523476251207782C52.18363273453094,25.460990687845374,52.3373253493014,25.492233469526578,52.49101796407186,25.42974790616417C52.644710578842314,25.367262342801762,52.79840319361278,24.262814824313512,52.952095808383234,24.262814824313512C53.1057884231537,24.262814824313512,53.259481037924154,25.33328607082434,53.41317365269462,25.33328607082434C53.56686626746507,25.33328607082434,53.72055888223554,24.98759066470415,53.87425149700599,24.98759066470415C54.02794411177645,24.98759066470415,54.18163672654691,26.739332734936728,54.33532934131737,26.739332734936728C54.489021956087825,26.739332734936728,54.64271457085829,25.558100461625703,54.796407185628745,25.558100461625703C54.9500998003992,25.558100461625703,55.103792415169664,26.44794266936679,55.25748502994012,26.44794266936679C55.41117764471058,26.44794266936679,55.56487025948104,25.757468082577535,55.7185628742515,25.38564759605284C55.87225548902196,25.01382710952814,56.025948103792416,24.47629636682777,56.17964071856288,24.217019750218597C56.333333333333336,23.957743133609426,56.4870259481038,23.94286990918692,56.640718562874255,23.82810482530484C56.79441117764471,23.71333974142276,56.948103792415175,23.528429246926116,57.10179640718563,23.528429246926116C57.25548902195609,23.528429246926116,57.40918163672655,25.907562009931674,57.56287425149701,25.907562009931674C57.71656686626746,25.907562009931674,57.87025948103793,25.8295421224566,58.02395209580838,25.8295421224566C58.177644710578846,25.8295421224566,58.3313373253493,26.787138443004974,58.485029940119766,26.787138443004974C58.63872255489022,26.787138443004974,58.792415169660686,25.94258105783692,58.94610778443114,25.94258105783692C59.0998003992016,25.94258105783692,59.25349301397206,27.509078540314405,59.40718562874252,28.773899934477935C59.560878243512974,30.038721328641465,59.71457085828344,33.531509422818104,59.868263473053894,33.531509422818104C60.02195608782435,33.531509422818104,60.17564870259481,28.879108938765327,60.32934131736527,28.833915232535638C60.48303393213573,28.78872152630595,60.63672654690619,28.811318379420793,60.79041916167665,28.766124673191104C60.94411177644711,28.720930966961415,61.09780439121757,26.834802414539368,61.25149700598803,25.98567908817286C61.405189620758485,25.13655576180635,61.55888223552895,23.671384714992044,61.712574850299404,23.671384714992044C61.86626746506986,23.671384714992044,62.019960079840324,24.25465079996235,62.17365269461078,24.25465079996235C62.327345309381236,24.25465079996235,62.4810379241517,23.220281873436978,62.634730538922156,22.613797319410413C62.78842315369262,22.007312765383837,62.942115768463076,20.615743475802923,63.09580838323354,20.615743475802923C63.249500998003995,20.615743475802923,63.40319361277446,21.18743171076328,63.556886227544915,21.18743171076328C63.71057884231537,21.18743171076328,63.86427145708583,15.975455390973636,64.01796407185628,15.975455390973636C64.17165668662675,15.975455390973636,64.3253493013972,16.063514274662314,64.47904191616766,16.239632042039666C64.63273453093812,16.41574980941702,64.78642714570857,17.376126190836953,64.94011976047904,17.376126190836953C65.0938123752495,17.376126190836953,65.24750499001996,16.57402902160234,65.40119760479043,16.16950282988606C65.55489021956089,15.764976638169793,65.70858283433134,15.222444620631308,65.8622754491018,14.948969040539318C66.01596806387226,14.675493460447328,66.16966067864271,14.528649349334124,66.32335329341318,14.528649349334124C66.47704590818364,14.528649349334124,66.63073852295409,16.548941655106585,66.78443113772455,16.548941655106585C66.93812375249502,16.548941655106585,67.09181636726547,16.515552577340973,67.24550898203593,16.448774421809745C67.39920159680639,16.381996266278517,67.55289421157686,15.852443265627677,67.70658682634732,15.481058112742737C67.86027944111778,15.109672959857807,68.01397205588823,14.220463504500142,68.1676646706587,14.220463504500142C68.32135728542916,14.220463504500142,68.47504990019961,14.240822945187402,68.62874251497007,14.28154182656192C68.78243512974053,14.322260707936438,68.93612774451098,14.664159599756449,69.08982035928145,14.930290190182289C69.24351297405191,15.196420780608129,69.39720558882236,15.451830014650128,69.55089820359282,15.878325369116961C69.70459081836329,16.304820723583795,69.85828343313374,17.48926231698329,70.0119760479042,17.48926231698329C70.16566866267466,17.48926231698329,70.31936127744511,17.42600732672267,70.47305389221557,17.299497346201427C70.62674650698604,17.172987365680186,70.78043912175649,16.13563792232818,70.93413173652695,16.13563792232818C71.08782435129741,16.13563792232818,71.24151696606786,19.636692293641232,71.39520958083833,20.26782483090856C71.54890219560879,20.898957368175886,71.70259481037924,21.21452363680955,71.8562874251497,21.21452363680955C72.00998003992017,21.21452363680955,72.16367265469061,20.953465189488846,72.31736526946108,20.497620248471843C72.47105788423154,20.04177530745484,72.62475049900199,18.47945399070754,72.77844311377245,18.47945399070754C72.93213572854292,18.47945399070754,73.08582834331337,18.92811086464948,73.23952095808383,18.92811086464948C73.3932135728543,18.92811086464948,73.54690618762476,18.7160163153595,73.70059880239522,18.30423118830121C73.85429141716568,17.892446061242932,74.00798403193613,16.457400102299815,74.1616766467066,16.457400102299815C74.31536926147706,16.457400102299815,74.46906187624751,17.749855058549795,74.62275449101797,18.13154142023599C74.77644710578844,18.513227781922186,74.93013972055888,18.525270325282527,75.08383233532935,18.747518272416986C75.23752495009981,18.969766219551445,75.39121756487026,19.465029103042756,75.54491017964072,19.465029103042756C75.69860279441119,19.465029103042756,75.85229540918164,18.36403995598107,76.0059880239521,18.36403995598107C76.15968063872256,18.36403995598107,76.31337325349301,18.424395421720142,76.46706586826348,18.424395421720142C76.62075848303394,18.424395421720142,76.77445109780439,16.816910770857564,76.92814371257485,16.222745146432327C77.08183632734531,15.628579522007092,77.23552894211576,15.239589679211107,77.38922155688623,14.859401675168726C77.54291417165669,14.479213671126345,77.69660678642714,14.061850199056186,77.8502994011976,13.941617122178037C78.00399201596807,13.821384045299885,78.15768463073853,13.761267506860808,78.311377245509,13.761267506860808C78.46506986027946,13.761267506860808,78.6187624750499,14.281784803477125,78.77245508982037,14.53028944351184C78.92614770459083,14.778794083546556,79.07984031936128,15.252295347069097,79.23353293413174,15.252295347069097C79.38722554890221,15.252295347069097,79.54091816367266,15.150670252281028,79.69461077844312,15.150670252281028C79.84830339321358,15.150670252281028,80.00199600798403,15.695971194249207,80.1556886227545,15.695971194249207C80.30938123752496,15.695971194249207,80.46307385229541,15.626236819582894,80.61676646706587,15.486768070250271C80.77045908183634,15.347299320917648,80.92415169660678,14.736941309901042,81.07784431137725,14.736941309901042C81.23153692614771,14.736941309901042,81.38522954091816,15.079741241114922,81.53892215568862,15.765341103542681C81.69261477045909,16.450940965970442,81.84630738522954,17.7666589370445,82,19.08237690811856"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="group cursor-pointer border-y border-beige-100 font-mono transition-colors hover:bg-gray-table-light"
+          >
+            <td class="flex items-center py-3 pl-4 font-body md:pl-5">
+              <div class="relative mr-2.5 h-[20px] w-[20px]">
+                <span
+                  style="
+                    box-sizing: border-box;
+                    display: block;
+                    overflow: hidden;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0px;
+                    margin: 0px;
+                    padding: 0px;
+                    position: absolute;
+                    inset: 0px;
+                  "
+                  ><img
+                    alt="Crypto.PYTH/USD"
+                    sizes="100vw"
+                    srcset="
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-pyth-usd.inline.svg&amp;w=640&amp;q=75   640w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-pyth-usd.inline.svg&amp;w=750&amp;q=75   750w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-pyth-usd.inline.svg&amp;w=828&amp;q=75   828w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-pyth-usd.inline.svg&amp;w=1080&amp;q=75 1080w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-pyth-usd.inline.svg&amp;w=1200&amp;q=75 1200w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-pyth-usd.inline.svg&amp;w=1920&amp;q=75 1920w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-pyth-usd.inline.svg&amp;w=2048&amp;q=75 2048w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-pyth-usd.inline.svg&amp;w=3840&amp;q=75 3840w
+                    "
+                    src="https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fcrypto-pyth-usd.inline.svg&amp;w=3840&amp;q=75"
+                    decoding="async"
+                    data-nimg="fill"
+                    style="
+                      position: absolute;
+                      inset: 0px;
+                      box-sizing: border-box;
+                      padding: 0px;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0px;
+                      height: 0px;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    "
+                /></span>
+              </div>
+              <div><span class="min-w-[72px]">PYTH/USD</span></div>
+              <svg
+                width="14"
+                height="4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                class="ml-2 opacity-0 group-hover:opacity-100"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.772 0 14 2 9.772 4V2.346H0v-.692h9.772V0Z"
+                  fill="#E6DAFE"
+                ></path>
+              </svg>
+            </td>
+            <td
+              class="py-3 px-4 text-right align-middle font-light leading-none md:px-5 xl:px-8"
+            >
+              <span class="leading-none total-cap">$0.717495</span>
+            </td>
+            <td
+              class="py-3 pr-4 text-right align-middle text-xs md:pr-5 xl:pr-8"
+            >
+              <span
+                class="inline-flex items-center leading-none"
+                style="color: rgb(195, 102, 142)"
+                ><svg
+                  width="9"
+                  height="8"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline; transform: rotate(180deg)"
+                >
+                  <path
+                    d="M3.735 1.306a1 1 0 0 1 1.682 0L8.412 5.96A1 1 0 0 1 7.57 7.5H1.58A1 1 0 0 1 .74 5.959l2.995-4.653Z"
+                  ></path></svg><span class="pl-1 leading-none">10.52%</span></span
+              >
+            </td>
+            <td class="hidden pr-3 sm:table-cell md:pr-5">
+              <div
+                class="recharts-wrapper"
+                style="
+                  position: relative;
+                  cursor: pointer;
+                  width: 87px;
+                  height: 40px;
+                  margin: 0px auto;
+                "
+              >
+                <svg
+                  class="recharts-surface"
+                  width="87"
+                  height="40"
+                  viewBox="0 0 87 40"
+                  version="1.1"
+                >
+                  <defs>
+                    <clipPath id="recharts4-clip">
+                      <rect x="5" y="5" height="30" width="77"></rect>
+                    </clipPath>
+                  </defs>
+                  <g class="recharts-layer recharts-line">
+                    <path
+                      stroke="#C3668E"
+                      stroke-width="1"
+                      fill="none"
+                      points="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+                      width="77"
+                      height="30"
+                      class="recharts-curve recharts-line-curve"
+                      type="monotone"
+                      d="M5,17.213131975639993C5.153692614770459,16.888884500877257,5.307385229540919,16.564637026114518,5.461077844311378,16.276064367065267C5.614770459081837,15.987491708016016,5.7684630738522955,15.481696021344485,5.922155688622754,15.481696021344485C6.075848303393213,15.481696021344485,6.229540918163673,15.92686229717906,6.383233532934132,16.098918191315413C6.536926147704591,16.270974085451765,6.69061876247505,16.514031386162603,6.844311377245509,16.514031386162603C6.998003992015968,16.514031386162603,7.151696606786428,15.484605795504635,7.3053892215568865,15.484605795504635C7.4590818363273454,15.484605795504635,7.612774451097805,15.515773560653388,7.766467065868264,15.531194999068827C7.920159680638723,15.546616437484266,8.073852295409182,15.577134425997272,8.227544910179642,15.577134425997272C8.3812375249501,15.577134425997272,8.53493013972056,15.55727576430428,8.688622754491018,15.55727576430428C8.842315369261478,15.55727576430428,8.996007984031936,15.788141184210751,9.149700598802395,15.788141184210751C9.303393213572855,15.788141184210751,9.457085828343313,14.770206649051893,9.610778443113773,14.360951653660473C9.764471057884231,13.951696658269055,9.918163672654691,13.33261121186224,10.071856287425149,13.33261121186224C10.225548902195609,13.33261121186224,10.379241516966069,14.7019356170277,10.532934131736528,14.7019356170277C10.686626746506986,14.7019356170277,10.840319361277446,13.808338867578872,10.994011976047904,13.620541022309446C11.147704590818364,13.432743177040019,11.301397205588822,13.526642099674733,11.455089820359282,13.338844254405306C11.608782435129742,13.151046409135878,11.7624750499002,12.281950833235548,11.91616766467066,12.281950833235548C12.069860279441118,12.281950833235548,12.223552894211577,12.860427063073974,12.377245508982035,12.860427063073974C12.530938123752495,12.860427063073974,12.684630738522955,12.80012691615515,12.838323353293415,12.679526622317503C12.992015968063873,12.558926328479858,13.145708582834333,11.439877505889164,13.29940119760479,11.439877505889164C13.45309381237525,11.439877505889164,13.606786427145709,11.482813083252266,13.760479041916168,11.568684237978466C13.914171656686628,11.654555392704667,14.067864271457086,12.544497786685719,14.221556886227546,12.93681191647807C14.375249500998004,13.329126046270423,14.528942115768464,13.922569016732579,14.682634730538922,13.922569016732579C14.836327345309382,13.922569016732579,14.99001996007984,13.557204208823475,15.1437125748503,13.557204208823475C15.29740518962076,13.557204208823475,15.451097804391217,14.337419675565307,15.604790419161677,14.337419675565307C15.758483033932137,14.337419675565307,15.912175648702597,13.865183019574143,16.065868263473057,13.551520304110642C16.219560878243517,13.237857588647143,16.373253493013973,12.749605871141217,16.526946107784433,12.455443382784313C16.680638722554892,12.16128089442741,16.83433133732535,11.786545373969224,16.98802395209581,11.786545373969224C17.14171656686627,11.786545373969224,17.295409181636725,11.908094443792415,17.449101796407184,12.023300351799831C17.602794411177644,12.138506259807249,17.756487025948104,12.279442155764148,17.910179640718564,12.47778082201373C18.063872255489024,12.67611948826331,18.217564870259483,13.213332349297314,18.371257485029943,13.213332349297314C18.524950099800403,13.213332349297314,18.67864271457086,13.000262495570283,18.83233532934132,12.57412278811622C18.98602794411178,12.147983080662158,19.139720558882235,8.500097667088312,19.293413173652695,8.500097667088312C19.447105788423155,8.500097667088312,19.60079840319361,9.143035239674568,19.75449101796407,9.143035239674568C19.90818363273453,9.143035239674568,20.06187624750499,7.772798521858903,20.21556886227545,7.772798521858903C20.36926147704591,7.772798521858903,20.52295409181637,9.25725153276085,20.67664670658683,9.25725153276085C20.83033932135729,9.25725153276085,20.984031936127746,7.611158014829122,21.137724550898206,7.062341061956436C21.291417165668665,6.513524109083751,21.44510978043912,5.964349815524741,21.59880239520958,5.964349815524741C21.75249500998004,5.964349815524741,21.906187624750498,6.595919578685347,22.059880239520957,6.9776141266932115C22.213572854291417,7.3593086747010785,22.367265469061877,8.254517103571937,22.520958083832337,8.254517103571937C22.674650698602797,8.254517103571937,22.828343313373253,7.892208652431058,22.982035928143713,7.892208652431058C23.135728542914173,7.892208652431058,23.289421157684632,8.466887590527135,23.443113772455092,8.679792629978426C23.596806387225552,8.892697669429715,23.75049900199601,9.169638889138803,23.904191616766468,9.169638889138803C24.057884231536928,9.169638889138803,24.211576846307384,8.675427968738203,24.365269461077844,8.675427968738203C24.518962075848304,8.675427968738203,24.672654690618764,8.679810861646098,24.826347305389223,8.688576647461888C24.980039920159683,8.697342433277678,25.13373253493014,8.768400722655283,25.2874251497006,8.768400722655283C25.44111776447106,8.768400722655283,25.59481037924152,7.85802354628287,25.74850299401198,7.64508350202966C25.90219560878244,7.432143457776452,26.055888223552895,7.44819170092639,26.209580838323355,7.325673435649849C26.363273453093814,7.203155170373307,26.51696606786427,6.909973910370409,26.67065868263473,6.909973910370409C26.82435129740519,6.909973910370409,26.97804391217565,7.515031911671831,27.13173652694611,7.515031911671831C27.28542914171657,7.515031911671831,27.439121756487026,7.158901078804277,27.592814371257486,6.990237733387982C27.746506986027946,6.821574387971686,27.900199600798405,6.5030518391740575,28.053892215568865,6.5030518391740575C28.207584830339325,6.5030518391740575,28.36127744510978,6.688545930916689,28.51497005988024,7.059534114401952C28.6686626746507,7.430522297887215,28.822355289421157,8.375308100653426,28.976047904191617,8.75615779318146C29.129740518962077,9.137007485709498,29.283433133732537,9.34463226957016,29.437125748502996,9.34463226957016C29.590818363273456,9.34463226957016,29.744510978043913,8.888541578467636,29.898203592814372,8.888541578467636C30.051896207584832,8.888541578467636,30.20558882235529,9.015283756510007,30.35928143712575,9.264127788539323C30.512974051896208,9.51297182056864,30.666666666666668,10.38160577064354,30.820359281437128,10.38160577064354C30.974051896207587,10.38160577064354,31.127744510978044,9.011714725246911,31.281437125748504,9.011714725246911C31.435129740518963,9.011714725246911,31.588822355289423,11.04874478816182,31.742514970059883,11.04874478816182C31.896207584830343,11.04874478816182,32.0499001996008,10.825313513064534,32.20359281437126,10.825313513064534C32.35728542914172,10.825313513064534,32.51097804391218,11.626821379844918,32.66467065868264,12.033044813536147C32.818363273453095,12.439268247227377,32.97205588822356,13.168753734043786,33.125748502994014,13.262654115211912C33.27944111776447,13.356554496380038,33.433133732534934,13.403504686964101,33.58682634730539,13.403504686964101C33.740518962075846,13.403504686964101,33.89421157684631,12.644761019870725,34.047904191616766,12.376441920436196C34.20159680638722,12.108122821001668,34.355289421157686,12.15970385517393,34.50898203592814,11.793590090356936C34.6626746506986,11.427476325539942,34.81636726546906,11.047459090957714,34.97005988023952,10.179759331534232C35.12375249500998,9.312059572110735,35.27744510978044,7.4192770052683,35.4311377245509,6.587391533815968C35.58483033932136,5.755506062363648,35.73852295409182,5.188446502820243,35.89221556886228,5.188446502820243C36.04590818363274,5.188446502820243,36.199600798403196,5.694901811228088,36.35329341317366,5.6956748339373C36.506986027944116,5.696447856646512,36.66067864271458,5.6960613452919056,36.814371257485035,5.6968343680011175C36.96806387225549,5.6976073907103295,37.121756487025955,6.048988874149797,37.27544910179641,6.275542504652284C37.42914171656687,6.502096135154772,37.58283433133733,6.831111737963282,37.73652694610779,7.056156151016041C37.89021956087824,7.2812005640688,38.04391217564871,7.625808982968838,38.19760479041916,7.625808982968838C38.35129740518962,7.625808982968838,38.50499001996008,7.199968274864553,38.65868263473054,7.067373002233385C38.812375249500995,6.934777729602217,38.96606786427146,6.83023734718183,39.119760479041915,6.83023734718183C39.27345309381238,6.83023734718183,39.427145708582835,7.690449725326566,39.5808383233533,7.690449725326566C39.734530938123754,7.690449725326566,39.88822355289422,6.750831141811418,40.041916167664674,6.750831141811418C40.19560878243513,6.750831141811418,40.34930139720559,7.375342332516862,40.50299401197605,7.406954585723425C40.656686626746506,7.438566838929988,40.81037924151697,7.4543729655332704,40.964071856287426,7.4543729655332704C41.11776447105788,7.4543729655332704,41.271457085828345,7.219769324487725,41.4251497005988,7.102684096176871C41.578842315369265,6.985598867866015,41.73253493013972,6.751861595668139,41.886227544910184,6.751861595668139C42.03992015968064,6.751861595668139,42.193612774451104,6.765479922151009,42.34730538922156,6.792716575116749C42.50099800399202,6.81995322808249,42.65469061876248,7.541470746860329,42.808383233532936,8.00478628322715C42.96207584830339,8.46810181959397,43.115768463073856,9.572609793317676,43.26946107784431,9.572609793317676C43.42315369261477,9.572609793317676,43.57684630738523,9.051445175433614,43.73053892215569,9.051445175433614C43.88423153692615,9.051445175433614,44.03792415169661,9.57099665536223,44.19161676646707,9.875042530763103C44.34530938123753,10.179088406163974,44.49900199600799,10.875720427838845,44.65269461077845,10.875720427838845C44.8063872255489,10.875720427838845,44.960079840319366,10.030551363322068,45.11377245508982,10.030551363322068C45.26746506986028,10.030551363322068,45.42115768463074,10.460629110992876,45.5748502994012,10.915954072053246C45.728542914171655,11.371279033113616,45.88223552894212,12.179142459243819,46.035928143712574,12.762501129684287C46.18962075848304,13.345859800124764,46.343313373253494,14.41610609469608,46.49700598802396,14.41610609469608C46.650698602794414,14.41610609469608,46.80439121756488,13.442044973885292,46.95808383233533,13.442044973885292C47.11177644710579,13.442044973885292,47.26546906187625,13.999818051184254,47.41916167664671,13.999818051184254C47.572854291417165,13.999818051184254,47.72654690618763,13.062426648191707,47.880239520958085,13.062426648191707C48.03393213572854,13.062426648191707,48.187624750499005,13.535249634615145,48.34131736526946,13.957046558830177C48.495009980039924,14.378843483045214,48.64870259481038,14.829247717001403,48.802395209580844,15.593208193481926C48.9560878243513,16.357168669962437,49.109780439121764,17.609955161480503,49.26347305389222,18.54080941771326C49.417165668662676,19.471663673946015,49.57085828343314,21.178333730878453,49.724550898203596,21.178333730878453C49.87824351297405,21.178333730878453,50.031936127744515,21.154367109826037,50.18562874251497,21.106433867721204C50.33932135728543,21.05850062561637,50.49301397205589,20.161838038932125,50.64670658682635,20.161838038932125C50.80039920159681,20.161838038932125,50.95409181636727,20.433307570540034,51.10778443113773,20.51597724442338C51.26147704590819,20.59864691830672,51.41516966067865,20.657856082232183,51.568862275449106,20.657856082232183C51.72255489021956,20.657856082232183,51.876247504990026,19.753931457681595,52.02994011976048,19.753931457681595C52.18363273453094,19.753931457681595,52.3373253493014,20.71037203632258,52.49101796407186,20.71037203632258C52.644710578842314,20.71037203632258,52.79840319361278,20.604615966301935,52.952095808383234,20.604615966301935C53.1057884231537,20.604615966301935,53.259481037924154,21.60431299965701,53.41317365269462,21.811789377742855C53.56686626746507,22.019265755828695,53.72055888223554,21.915527566785777,53.87425149700599,22.123003944871616C54.02794411177645,22.330480322957456,54.18163672654691,24.063289121828518,54.33532934131737,24.757837263888685C54.489021956087825,25.452385405948853,54.64271457085829,25.752456413164293,54.796407185628745,26.290292797232627C54.9500998003992,26.828129181300962,55.103792415169664,27.984855568298695,55.25748502994012,27.984855568298695C55.41117764471058,27.984855568298695,55.56487025948104,27.28184246293928,55.7185628742515,26.95556999684843C55.87225548902196,26.62929753075757,56.025948103792416,26.26776939499298,56.17964071856288,26.027220771753562C56.333333333333336,25.78667214851415,56.4870259481038,25.512278257411932,56.640718562874255,25.512278257411932C56.79441117764471,25.512278257411932,56.948103792415175,25.693862021072686,57.10179640718563,25.983038148321818C57.25548902195609,26.27221427557095,57.40918163672655,26.891505739822442,57.56287425149701,27.247335020906725C57.71656686626746,27.603164301991008,57.87025948103793,27.758715067385626,58.02395209580838,28.118013834827526C58.177644710578846,28.477312602269432,58.3313373253493,29.40312762555815,58.485029940119766,29.40312762555815C58.63872255489022,29.40312762555815,58.792415169660686,28.531267399572343,58.94610778443114,28.531267399572343C59.0998003992016,28.531267399572343,59.25349301397206,29.972233507480855,59.40718562874252,30.608224814684814C59.560878243512974,31.244216121888773,59.71457085828344,32.3472152427961,59.868263473053894,32.3472152427961C60.02195608782435,32.3472152427961,60.17564870259481,29.975790141209917,60.32934131736527,29.402055603499154C60.48303393213573,28.82832106578838,60.63672654690619,28.9743282824244,60.79041916167665,28.541453796932995C60.94411177644711,28.1085793114416,61.09780439121757,27.3468832080857,61.25149700598803,26.804808690550768C61.405189620758485,26.262734173015836,61.55888223552895,25.28900669172341,61.712574850299404,25.28900669172341C61.86626746506986,25.28900669172341,62.019960079840324,26.97269172059078,62.17365269461078,26.97269172059078C62.327345309381236,26.97269172059078,62.4810379241517,26.803038030986645,62.634730538922156,26.463730651778373C62.78842315369262,26.124423272570098,62.942115768463076,24.039203265669553,63.09580838323354,23.555334805704856C63.249500998003995,23.071466345740166,63.40319361277446,23.31340057572251,63.556886227544915,22.82953211575782C63.71057884231537,22.34566365579314,63.86427145708583,19.335330909442483,64.01796407185628,19.335330909442483C64.17165668662675,19.335330909442483,64.3253493013972,20.060052826130043,64.47904191616766,20.060052826130043C64.63273453093812,20.060052826130043,64.78642714570857,18.61350709864776,64.94011976047904,17.906185485584565C65.0938123752495,17.19886387252135,65.24750499001996,15.816123147750824,65.40119760479043,15.816123147750824C65.55489021956089,15.816123147750824,65.70858283433134,16.090061247161273,65.8622754491018,16.382719622935397C66.01596806387226,16.67537799870952,66.16966067864271,17.294722334797264,66.32335329341318,17.572073402395567C66.47704590818364,17.84942446999387,66.63073852295409,18.04682602852521,66.78443113772455,18.04682602852521C66.93812375249502,18.04682602852521,67.09181636726547,17.93595925742326,67.24550898203593,17.817872745923967C67.39920159680639,17.69978623442467,67.55289421157686,17.614509432064516,67.70658682634732,17.338306959529426C67.86027944111778,17.062104486994343,68.01397205588823,16.16065791071347,68.1676646706587,16.16065791071347C68.32135728542916,16.16065791071347,68.47504990019961,16.232111462646163,68.62874251497007,16.375018566511542C68.78243512974053,16.517925670376922,68.93612774451098,17.67546883608628,69.08982035928145,18.11295228716468C69.24351297405191,18.55043573824308,69.39720558882236,18.408607949103768,69.55089820359282,18.999919272981945C69.70459081836329,19.59123059686012,69.85828343313374,21.178565273057867,70.0119760479042,21.83807142058938C70.16566866267466,22.497577568120892,70.31936127744511,22.95695615817102,70.47305389221557,22.95695615817102C70.62674650698604,22.95695615817102,70.78043912175649,22.22192751511622,70.93413173652695,22.22192751511622C71.08782435129741,22.22192751511622,71.24151696606786,24.55515946073362,71.39520958083833,24.55515946073362C71.54890219560879,24.55515946073362,71.70259481037924,24.25767552716059,71.8562874251497,24.25767552716059C72.00998003992017,24.25767552716059,72.16367265469061,24.888070441656524,72.31736526946108,24.888070441656524C72.47105788423154,24.888070441656524,72.62475049900199,23.9861564054166,72.77844311377245,23.9861564054166C72.93213572854292,23.9861564054166,73.08582834331337,24.714453187500894,73.23952095808383,24.714453187500894C73.3932135728543,24.714453187500894,73.54690618762476,24.709661905237194,73.70059880239522,24.7000793407098C73.85429141716568,24.690496776182403,74.00798403193613,23.776552027080303,74.1616766467066,23.776552027080303C74.31536926147706,23.776552027080303,74.46906187624751,24.10400371743606,74.62275449101797,24.258056204381536C74.77644710578844,24.41210869132701,74.93013972055888,24.48291830075759,75.08383233532935,24.70086694875314C75.23752495009981,24.918815596748694,75.39121756487026,25.360789872207597,75.54491017964072,25.565748092354838C75.69860279441119,25.770706312502078,75.85229540918164,25.93061626963659,76.0059880239521,25.93061626963659C76.15968063872256,25.93061626963659,76.31337325349301,25.829777645019927,76.46706586826348,25.628100395786603C76.62075848303394,25.42642314655328,76.77445109780439,24.869477057699825,76.92814371257485,24.546998966284473C77.08183632734531,24.22452087486912,77.23552894211576,23.693231847294484,77.38922155688623,23.693231847294484C77.54291417165669,23.693231847294484,77.69660678642714,24.27693691942069,77.8502994011976,24.27693691942069C78.00399201596807,24.27693691942069,78.15768463073853,24.232728042387492,78.311377245509,24.232728042387492C78.46506986027946,24.232728042387492,78.6187624750499,24.665177730022187,78.77245508982037,25.22248225346202C78.92614770459083,25.77978677690185,79.07984031936128,27.045736532477726,79.23353293413174,27.576555183026482C79.38722554890221,28.107373833575238,79.54091816367266,28.25797470119743,79.69461077844312,28.407394156754567C79.84830339321358,28.556813612311704,80.00199600798403,28.482103884533135,80.1556886227545,28.631523340090272C80.30938123752496,28.78094279564741,80.46307385229541,30.219715269301858,80.61676646706587,30.219715269301858C80.77045908183634,30.219715269301858,80.92415169660678,29.583087312262855,81.07784431137725,29.583087312262855C81.23153692614771,29.583087312262855,81.38522954091816,31.119067391600773,81.53892215568862,31.9954519882356C81.69261477045909,32.87183658487043,81.84630738522954,33.85661573847112,82,34.84139489207182"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="group cursor-pointer border-y border-beige-100 font-mono transition-colors hover:bg-gray-table-light"
+          >
+            <td class="flex items-center py-3 pl-4 font-body md:pl-5">
+              <div class="relative mr-2.5 h-[20px] w-[20px]">
+                <span
+                  style="
+                    box-sizing: border-box;
+                    display: block;
+                    overflow: hidden;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0px;
+                    margin: 0px;
+                    padding: 0px;
+                    position: absolute;
+                    inset: 0px;
+                  "
+                  ><img
+                    alt="Equity.US.AMZN/USD"
+                    sizes="100vw"
+                    srcset="
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fequity-us-amzn-usd.inline.svg&amp;w=640&amp;q=75   640w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fequity-us-amzn-usd.inline.svg&amp;w=750&amp;q=75   750w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fequity-us-amzn-usd.inline.svg&amp;w=828&amp;q=75   828w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fequity-us-amzn-usd.inline.svg&amp;w=1080&amp;q=75 1080w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fequity-us-amzn-usd.inline.svg&amp;w=1200&amp;q=75 1200w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fequity-us-amzn-usd.inline.svg&amp;w=1920&amp;q=75 1920w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fequity-us-amzn-usd.inline.svg&amp;w=2048&amp;q=75 2048w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fequity-us-amzn-usd.inline.svg&amp;w=3840&amp;q=75 3840w
+                    "
+                    src="https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fequity-us-amzn-usd.inline.svg&amp;w=3840&amp;q=75"
+                    decoding="async"
+                    data-nimg="fill"
+                    style="
+                      position: absolute;
+                      inset: 0px;
+                      box-sizing: border-box;
+                      padding: 0px;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0px;
+                      height: 0px;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    "
+                /></span>
+              </div>
+              <div><span class="min-w-[72px]">AMZN/USD</span></div>
+              <svg
+                width="14"
+                height="4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                class="ml-2 opacity-0 group-hover:opacity-100"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.772 0 14 2 9.772 4V2.346H0v-.692h9.772V0Z"
+                  fill="#E6DAFE"
+                ></path>
+              </svg>
+            </td>
+            <td
+              class="py-3 px-4 text-right align-middle font-light leading-none md:px-5 xl:px-8"
+            >
+              <span class="leading-none total-cap">$187.475</span>
+            </td>
+            <td
+              class="py-3 pr-4 text-right align-middle text-xs md:pr-5 xl:pr-8"
+            >
+              <span
+                class="inline-flex items-center leading-none"
+                style="color: rgb(21, 174, 110)"
+                ><svg
+                  width="9"
+                  height="8"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline"
+                >
+                  <path
+                    d="M3.735 1.306a1 1 0 0 1 1.682 0L8.412 5.96A1 1 0 0 1 7.57 7.5H1.58A1 1 0 0 1 .74 5.959l2.995-4.653Z"
+                  ></path></svg><span class="pl-1 leading-none">1.01%</span></span
+              >
+            </td>
+            <td class="hidden pr-3 sm:table-cell md:pr-5">
+              <div
+                class="recharts-wrapper"
+                style="
+                  position: relative;
+                  cursor: pointer;
+                  width: 87px;
+                  height: 40px;
+                  margin: 0px auto;
+                "
+              >
+                <svg
+                  class="recharts-surface"
+                  width="87"
+                  height="40"
+                  viewBox="0 0 87 40"
+                  version="1.1"
+                >
+                  <defs>
+                    <clipPath id="recharts7-clip">
+                      <rect x="5" y="5" height="30" width="77"></rect>
+                    </clipPath>
+                  </defs>
+                  <g class="recharts-layer recharts-line">
+                    <path
+                      stroke="#15AE6E"
+                      stroke-width="1"
+                      fill="none"
+                      points="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+                      width="77"
+                      height="30"
+                      class="recharts-curve recharts-line-curve"
+                      type="monotone"
+                      d="M5,29.670693664987517C5.6581196581196584,29.417336646349302,6.316239316239316,29.163979627711083,6.9743589743589745,28.41273941484384C7.632478632478633,27.6614992019766,8.290598290598291,25.16325238778406,8.948717948717949,25.16325238778406C9.606837606837606,25.16325238778406,10.264957264957266,25.47028320904794,10.923076923076923,26.0843448515757C11.581196581196581,26.698406494103462,12.23931623931624,31.69007452519481,12.897435897435898,31.69007452519481C13.555555555555555,31.69007452519481,14.213675213675215,31.013560879873584,14.871794871794872,30.534405390050676C15.52991452991453,30.055249900227768,16.188034188034187,29.961317455452903,16.846153846153847,28.81514158625736C17.504273504273506,27.66896571706182,18.162393162393162,24.4426678784516,18.82051282051282,23.137817596426537C19.47863247863248,21.832967314401472,20.136752136752136,20.986039894106984,20.794871794871796,20.986039894106984C21.452991452991455,20.986039894106984,22.11111111111111,21.1535144416376,22.76923076923077,21.48846353669883C23.42735042735043,21.82341263176006,24.085470085470085,26.1031383595813,24.743589743589745,26.6155641492908C25.401709401709404,27.1279899390003,26.05982905982906,27.38420283385505,26.71794871794872,27.38420283385505C27.37606837606838,27.38420283385505,28.034188034188034,27.24397975031387,28.692307692307693,26.963533583231513C29.350427350427353,26.683087416149156,30.00854700854701,25.50258838947581,30.666666666666668,25.50258838947581C31.324786324786327,25.50258838947581,31.982905982905983,27.67889767367365,32.64102564102564,27.67889767367365C33.2991452991453,27.67889767367365,33.957264957264954,24.538644621716276,34.61538461538461,24.538644621716276C35.27350427350427,24.538644621716276,35.93162393162393,24.588936119329716,36.58974358974359,24.689519114556596C37.24786324786325,24.790102109783476,37.90598290598291,27.20005804112817,38.56410256410257,27.20005804112817C39.22222222222223,27.20005804112817,39.88034188034188,27.045603832477177,40.53846153846154,27.045603832477177C41.1965811965812,27.045603832477177,41.85470085470085,28.852421518804384,42.51282051282051,29.419481843691667C43.17094017094017,29.98654216857895,43.82905982905983,30.447965781800875,44.48717948717949,30.447965781800875C45.14529914529915,30.447965781800875,45.80341880341881,30.038948155188322,46.46153846153847,29.220912901963217C47.119658119658126,28.402877648738116,47.77777777777778,25.417412210335577,48.43589743589744,25.417412210335577C49.0940170940171,25.417412210335577,49.75213675213675,34.031103379559255,50.41025641025641,34.031103379559255C51.06837606837607,34.031103379559255,51.72649572649573,31.21674484737739,52.38461538461539,30.617844354165083C53.042735042735046,30.018943860952774,53.700854700854705,30.08186964966242,54.358974358974365,29.719493614346618C55.017094017094024,29.357117579030817,55.675213675213676,28.885253128027898,56.333333333333336,28.44358814227028C56.991452991452995,28.00192315651266,57.64957264957265,27.25368358778089,58.30769230769231,27.069503699800904C58.965811965811966,26.885323811820918,59.623931623931625,26.802323538369563,60.282051282051285,26.793233867830924C60.940170940170944,26.784144197292285,61.5982905982906,26.788689032561603,62.25641025641026,26.779599362022964C62.914529914529915,26.770509691484325,63.572649572649574,25.112057187404645,64.23076923076923,24.450309869802044C64.88888888888889,23.788562552199437,65.54700854700855,23.274601345169238,66.2051282051282,22.809115456407344C66.86324786324786,22.34362956764545,67.52136752136752,22.23980903532514,68.17948717948718,21.657394537230676C68.83760683760684,21.07498003913621,69.4957264957265,20.511078287022954,70.15384615384616,19.314628467840546C70.81196581196582,18.118178648658137,71.47008547008548,16.20773345390252,72.12820512820514,14.478695622136236C72.7863247863248,12.749657790369964,73.44444444444444,10.21671054472914,74.1025641025641,8.94040147724288C74.76068376068376,7.664092409756608,75.41880341880342,7.311253509455748,76.07692307692308,6.82084121721866C76.73504273504274,6.330428924981572,77.3931623931624,5.997927723820352,78.05128205128206,5.997927723820352C78.70940170940172,5.997927723820352,79.36752136752136,6.530638569789895,80.02564102564102,7.596060261728981C80.68376068376068,8.661481953668074,81.34188034188034,11.077351435150797,82,13.49322091663352"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="group cursor-pointer border-y border-beige-100 font-mono transition-colors hover:bg-gray-table-light"
+          >
+            <td class="flex items-center py-3 pl-4 font-body md:pl-5">
+              <div class="relative mr-2.5 h-[20px] w-[20px]">
+                <span
+                  style="
+                    box-sizing: border-box;
+                    display: block;
+                    overflow: hidden;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0px;
+                    margin: 0px;
+                    padding: 0px;
+                    position: absolute;
+                    inset: 0px;
+                  "
+                  ><img
+                    alt="FX.EUR/USD"
+                    sizes="100vw"
+                    srcset="
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Ffx-eur-usd.inline.svg&amp;w=640&amp;q=75   640w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Ffx-eur-usd.inline.svg&amp;w=750&amp;q=75   750w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Ffx-eur-usd.inline.svg&amp;w=828&amp;q=75   828w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Ffx-eur-usd.inline.svg&amp;w=1080&amp;q=75 1080w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Ffx-eur-usd.inline.svg&amp;w=1200&amp;q=75 1200w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Ffx-eur-usd.inline.svg&amp;w=1920&amp;q=75 1920w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Ffx-eur-usd.inline.svg&amp;w=2048&amp;q=75 2048w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Ffx-eur-usd.inline.svg&amp;w=3840&amp;q=75 3840w
+                    "
+                    src="https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Ffx-eur-usd.inline.svg&amp;w=3840&amp;q=75"
+                    decoding="async"
+                    data-nimg="fill"
+                    style="
+                      position: absolute;
+                      inset: 0px;
+                      box-sizing: border-box;
+                      padding: 0px;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0px;
+                      height: 0px;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    "
+                /></span>
+              </div>
+              <div><span class="min-w-[72px]">EUR/USD</span></div>
+              <svg
+                width="14"
+                height="4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                class="ml-2 opacity-0 group-hover:opacity-100"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.772 0 14 2 9.772 4V2.346H0v-.692h9.772V0Z"
+                  fill="#E6DAFE"
+                ></path>
+              </svg>
+            </td>
+            <td
+              class="py-3 px-4 text-right align-middle font-light leading-none md:px-5 xl:px-8"
+            >
+              <span class="leading-none  total-cap">$1.06485</span>
+            </td>
+            <td
+              class="py-3 pr-4 text-right align-middle text-xs md:pr-5 xl:pr-8"
+            >
+              <span
+                class="inline-flex items-center leading-none"
+                style="color: rgb(195, 102, 142)"
+                ><svg
+                  width="9"
+                  height="8"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline; transform: rotate(180deg)"
+                >
+                  <path
+                    d="M3.735 1.306a1 1 0 0 1 1.682 0L8.412 5.96A1 1 0 0 1 7.57 7.5H1.58A1 1 0 0 1 .74 5.959l2.995-4.653Z"
+                  ></path></svg><span class="pl-1 leading-none">1.58%</span></span
+              >
+            </td>
+            <td class="hidden pr-3 sm:table-cell md:pr-5">
+              <div
+                class="recharts-wrapper"
+                style="
+                  position: relative;
+                  cursor: pointer;
+                  width: 87px;
+                  height: 40px;
+                  margin: 0px auto;
+                "
+              >
+                <svg
+                  class="recharts-surface"
+                  width="87"
+                  height="40"
+                  viewBox="0 0 87 40"
+                  version="1.1"
+                >
+                  <defs>
+                    <clipPath id="recharts10-clip">
+                      <rect x="5" y="5" height="30" width="77"></rect>
+                    </clipPath>
+                  </defs>
+                  <g class="recharts-layer recharts-line">
+                    <path
+                      stroke="#C3668E"
+                      stroke-width="1"
+                      fill="none"
+                      points="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+                      width="77"
+                      height="30"
+                      class="recharts-curve recharts-line-curve"
+                      type="monotone"
+                      d="M5,13.659768671972138C5.213888888888889,12.92935698550191,5.427777777777778,12.198945299031683,5.641666666666667,11.751858351682047C5.855555555555555,11.304771404332412,6.069444444444445,10.977246987874324,6.283333333333333,10.977246987874324C6.497222222222223,10.977246987874324,6.711111111111111,11.261165580625141,6.925000000000001,11.261165580625141C7.138888888888889,11.261165580625141,7.352777777777778,11.256754096514605,7.566666666666666,11.256754096514605C7.780555555555556,11.256754096514605,7.9944444444444445,11.406065866407488,8.208333333333334,11.406065866407488C8.422222222222222,11.406065866407488,8.636111111111113,11.202873662379133,8.850000000000001,11.168637529282423C9.06388888888889,11.134401396185712,9.277777777777779,11.142149772123297,9.491666666666667,11.117283329637358C9.705555555555556,11.092416887151419,9.919444444444444,11.019438874366795,10.133333333333333,11.019438874366795C10.347222222222221,11.019438874366795,10.561111111111112,11.884994679836637,10.775,11.884994679836637C10.988888888888889,11.884994679836637,11.20277777777778,11.79122236374484,11.416666666666668,11.79122236374484C11.630555555555556,11.79122236374484,11.844444444444445,12.47138272159772,12.058333333333334,12.47138272159772C12.272222222222222,12.47138272159772,12.486111111111112,12.0557794428997,12.700000000000001,11.79246662849392C12.91388888888889,11.52915381408814,13.127777777777778,10.89150583516304,13.341666666666667,10.89150583516304C13.555555555555555,10.89150583516304,13.769444444444446,11.095395581550859,13.983333333333334,11.209019576139774C14.197222222222223,11.322643570728687,14.411111111111111,11.573249802696523,14.625,11.573249802696523C14.838888888888889,11.573249802696523,15.052777777777779,11.394415023756736,15.266666666666667,11.394415023756736C15.480555555555556,11.394415023756736,15.694444444444446,11.559902235387915,15.908333333333335,11.559902235387915C16.122222222222224,11.559902235387915,16.336111111111112,11.547346472919852,16.55,11.547346472919852C16.76388888888889,11.547346472919852,16.97777777777778,11.863597096651173,17.19166666666667,12.0091949247929C17.40555555555556,12.154792752934627,17.619444444444447,12.420933441770215,17.833333333333336,12.420933441770215C18.047222222222224,12.420933441770215,18.261111111111113,11.833753595168831,18.475,11.833753595168831C18.68888888888889,11.833753595168831,18.90277777777778,12.184410024462704,19.116666666666667,12.184410024462704C19.330555555555556,12.184410024462704,19.544444444444444,12.15503783538531,19.758333333333333,12.09629345723052C19.97222222222222,12.03754907907573,20.186111111111114,10.921726386569409,20.400000000000002,10.525013309062397C20.61388888888889,10.128300231555388,20.82777777777778,9.932667878502679,21.041666666666668,9.716014992188452C21.255555555555556,9.499362105874225,21.469444444444445,9.225095991177032,21.683333333333334,9.225095991177032C21.897222222222222,9.225095991177032,22.111111111111114,9.732642893835525,22.325000000000003,9.732642893835525C22.53888888888889,9.732642893835525,22.75277777777778,9.208430384537413,22.96666666666667,9.029293965658399C23.180555555555557,8.850157546779384,23.394444444444446,8.657824380561433,23.608333333333334,8.657824380561433C23.822222222222223,8.657824380561433,24.03611111111111,8.793675468168447,24.25,8.793675468168447C24.46388888888889,8.793675468168447,24.67777777777778,8.749258987124499,24.89166666666667,8.721281882765776C25.105555555555558,8.693304778407056,25.319444444444446,8.66992768312084,25.533333333333335,8.625812842016117C25.747222222222224,8.581698000911395,25.961111111111112,8.511943764976518,26.175,8.456592836137446C26.38888888888889,8.401241907298374,26.60277777777778,8.293707268981688,26.81666666666667,8.293707268981688C27.03055555555556,8.293707268981688,27.244444444444447,8.40516322650784,27.458333333333336,8.451276432209607C27.672222222222224,8.497389637911374,27.886111111111113,8.536621682500613,28.1,8.57038650319229C28.31388888888889,8.604151323883968,28.52777777777778,8.598212787581419,28.741666666666667,8.653865356359677C28.955555555555556,8.709517925137936,29.169444444444448,8.98732830912044,29.383333333333336,8.98732830912044C29.597222222222225,8.98732830912044,29.811111111111114,8.909901107232738,30.025000000000002,8.883941219967271C30.23888888888889,8.857981332701804,30.45277777777778,8.831568985527642,30.666666666666668,8.831568985527642C30.880555555555556,8.831568985527642,31.09444444444445,8.851194434070198,31.308333333333337,8.880321540697036C31.522222222222226,8.909448647323874,31.736111111111114,8.963743836376043,31.950000000000003,9.006331625288666C32.16388888888889,9.04891941420129,32.37777777777778,9.135848274172773,32.59166666666667,9.135848274172773C32.80555555555556,9.135848274172773,33.019444444444446,8.591293921476517,33.233333333333334,8.336804075291722C33.44722222222222,8.082314229106927,33.66111111111111,7.608909197064008,33.875,7.608909197064008C34.08888888888889,7.608909197064008,34.30277777777778,7.871901519034478,34.516666666666666,7.871901519034478C34.730555555555554,7.871901519034478,34.94444444444444,7.471512204768725,35.15833333333333,7.19818871488151C35.37222222222222,6.92486522499429,35.586111111111116,6.231960579711171,35.800000000000004,6.231960579711171C36.01388888888889,6.231960579711171,36.22777777777778,6.942492308940056,36.44166666666667,7.403039938575478C36.65555555555556,7.8635875682109,36.86944444444445,8.995246357523701,37.083333333333336,8.995246357523701C37.297222222222224,8.995246357523701,37.51111111111111,8.829646030915264,37.725,8.829646030915264C37.93888888888889,8.829646030915264,38.15277777777778,9.21563203808533,38.36666666666667,9.275884615936054C38.580555555555556,9.336137193786778,38.794444444444444,9.366263482712139,39.00833333333333,9.366263482712139C39.22222222222222,9.366263482712139,39.43611111111112,9.342396222524682,39.650000000000006,9.294661702149767C39.863888888888894,9.246927181774854,40.07777777777778,8.790621363784247,40.29166666666667,8.790621363784247C40.50555555555556,8.790621363784247,40.71944444444445,8.848083772197455,40.93333333333334,8.848083772197455C41.147222222222226,8.848083772197455,41.361111111111114,8.78226970796825,41.575,8.751031121767195C41.78888888888889,8.719792535566139,42.00277777777778,8.660652254991115,42.21666666666667,8.660652254991115C42.43055555555556,8.660652254991115,42.644444444444446,8.835735387187452,42.858333333333334,8.91617898846685C43.07222222222222,8.996622589746249,43.28611111111111,9.079347343065665,43.5,9.143313862667501C43.71388888888889,9.207280382269337,43.927777777777784,9.299978106077862,44.14166666666667,9.299978106077862C44.35555555555556,9.299978106077862,44.56944444444445,9.287648573564066,44.78333333333334,9.287648573564066C44.99722222222223,9.287648573564066,45.211111111111116,9.449289875970743,45.425000000000004,9.449289875970743C45.63888888888889,9.449289875970743,45.85277777777778,9.253261620497845,46.06666666666667,9.253261620497845C46.28055555555556,9.253261620497845,46.49444444444445,9.550527780557026,46.708333333333336,9.550527780557026C46.922222222222224,9.550527780557026,47.13611111111111,9.298941218787,47.35,9.207223824780876C47.56388888888889,9.11550643077475,47.77777777777778,9.129400720473065,47.99166666666667,9.000223416520274C48.205555555555556,8.871046112567482,48.41944444444445,8.56654059396771,48.63333333333334,8.432160001064123C48.84722222222223,8.297779408160537,49.06111111111112,8.193939859098752,49.275000000000006,8.193939859098752C49.488888888888894,8.193939859098752,49.70277777777778,8.254380961911485,49.91666666666667,8.37526316753695C50.13055555555556,8.496145373162415,50.34444444444445,10.334169490044166,50.55833333333334,12.14527224235443C50.772222222222226,13.956374994664694,50.986111111111114,18.588527573140215,51.2,19.241879681398533C51.41388888888889,19.89523178965685,51.62777777777778,19.8120357239324,51.84166666666667,20.22190784378601C52.05555555555556,20.63177996363962,52.269444444444446,21.260190219427454,52.483333333333334,21.70111240052019C52.69722222222222,22.142034581612933,52.91111111111112,22.867440930342443,53.12500000000001,22.867440930342443C53.338888888888896,22.867440930342443,53.552777777777784,22.164940364494075,53.76666666666667,21.94521452129944C53.98055555555556,21.725488678104806,54.19444444444445,21.549085871174636,54.40833333333334,21.549085871174636C54.62222222222223,21.549085871174636,54.836111111111116,21.877684879916085,55.050000000000004,21.877684879916085C55.26388888888889,21.877684879916085,55.47777777777778,21.70133863047446,55.69166666666667,21.70133863047446C55.90555555555556,21.70133863047446,56.11944444444445,21.703525520033516,56.333333333333336,21.70789929915163C56.547222222222224,21.712273078269746,56.76111111111111,21.856419264204213,56.975,21.856419264204213C57.18888888888889,21.856419264204213,57.402777777777786,21.758801038887913,57.616666666666674,21.758801038887913C57.83055555555556,21.758801038887913,58.04444444444445,21.773505985922867,58.25833333333334,21.773505985922867C58.47222222222223,21.773505985922867,58.68611111111112,21.658373791638063,58.900000000000006,21.605304014839014C59.113888888888894,21.552234238039965,59.32777777777778,21.5019546306783,59.54166666666667,21.455087325128567C59.75555555555556,21.408220019578835,59.96944444444445,21.324100181540615,60.18333333333334,21.324100181540615C60.397222222222226,21.324100181540615,60.611111111111114,21.50018249603548,60.825,21.507346444590944C61.03888888888889,21.514510393146406,61.25277777777778,21.510928418868673,61.46666666666667,21.518092367424135C61.68055555555556,21.525256315979597,61.89444444444445,22.499364794560947,62.10833333333334,22.499364794560947C62.32222222222223,22.499364794560947,62.53611111111112,22.364494036756163,62.75000000000001,22.190447791850765C62.963888888888896,22.016401546945367,63.177777777777784,21.455087325128567,63.39166666666667,21.455087325128567C63.60555555555556,21.455087325128567,63.81944444444444,22.350825977012363,64.03333333333333,22.658291337515198C64.24722222222222,22.965756698018044,64.46111111111112,23.299879488145585,64.67500000000001,23.299879488145585C64.8888888888889,23.299879488145585,65.10277777777777,23.257517929187316,65.31666666666666,23.21334653059401C65.53055555555555,23.169175132000703,65.74444444444445,23.153848052591254,65.95833333333334,23.03485109658574C66.17222222222223,22.91585414058023,66.38611111111112,21.86987994649008,66.60000000000001,21.86987994649008C66.8138888888889,21.86987994649008,67.02777777777779,25.415808251491107,67.24166666666667,25.415808251491107C67.45555555555556,25.415808251491107,67.66944444444445,25.39884100491234,67.88333333333334,25.364906511754814C68.09722222222223,25.330972018597286,68.31111111111112,24.814526737733186,68.525,24.56620165780529C68.7388888888889,24.317876577877396,68.95277777777778,24.10107287159341,69.16666666666667,23.874956032187445C69.38055555555556,23.64883919278148,69.59444444444445,23.20950062136951,69.80833333333334,23.20950062136951C70.02222222222223,23.20950062136951,70.23611111111111,23.35168614769947,70.45,23.421025628717903C70.66388888888889,23.490365109736334,70.87777777777778,23.625537507480097,71.09166666666667,23.625537507480097C71.30555555555556,23.625537507480097,71.51944444444445,23.57399478287315,71.73333333333333,23.539117664905774C71.94722222222222,23.504240546938398,72.16111111111111,23.41627479967585,72.375,23.41627479967585C72.58888888888889,23.41627479967585,72.80277777777778,23.536289790476008,73.01666666666667,23.60664730628913C73.23055555555555,23.67700482210225,73.44444444444446,23.838419894554583,73.65833333333335,23.838419894554583C73.87222222222223,23.838419894554583,74.08611111111112,23.72858525170175,74.30000000000001,23.72858525170175C74.5138888888889,23.72858525170175,74.72777777777779,23.734391820530874,74.94166666666668,23.74600495818912C75.15555555555557,23.757618095847363,75.36944444444445,24.11638109850664,75.58333333333334,24.316330673188915C75.79722222222223,24.51628024787119,76.01111111111112,24.793958664380273,76.22500000000001,24.945702406282773C76.4388888888889,25.097446148185274,76.65277777777779,25.03939931238982,76.86666666666667,25.22679312460391C77.08055555555556,25.414186936818,77.29444444444445,26.06365543085957,77.50833333333334,26.66629432434378C77.72222222222223,27.268933217827993,77.93611111111112,28.706209823016053,78.15,28.84262648550919C78.3638888888889,28.979043148002326,78.57777777777778,28.910834816755756,78.79166666666667,29.047251479248892C79.00555555555556,29.18366814174203,79.21944444444445,30.141431506118984,79.43333333333334,30.62543164102546C79.64722222222223,31.109431775931938,79.86111111111111,31.95125228868775,80.075,31.95125228868775C80.28888888888889,31.95125228868775,80.50277777777778,31.865850480908236,80.71666666666667,31.865850480908236C80.93055555555556,31.865850480908236,81.14444444444445,32.45651803930618,81.35833333333333,32.77834900191236C81.57222222222222,33.10017996451854,81.78611111111111,33.44850811053193,82,33.79683625654532"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="group cursor-pointer border-y border-beige-100 font-mono transition-colors hover:bg-gray-table-light"
+          >
+            <td class="flex items-center py-3 pl-4 font-body md:pl-5">
+              <div class="relative mr-2.5 h-[20px] w-[20px]">
+                <span
+                  style="
+                    box-sizing: border-box;
+                    display: block;
+                    overflow: hidden;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0px;
+                    margin: 0px;
+                    padding: 0px;
+                    position: absolute;
+                    inset: 0px;
+                  "
+                  ><img
+                    alt="Metal.XAG/USD"
+                    sizes="100vw"
+                    srcset="
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fmetal-xag-usd.inline.svg&amp;w=640&amp;q=75   640w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fmetal-xag-usd.inline.svg&amp;w=750&amp;q=75   750w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fmetal-xag-usd.inline.svg&amp;w=828&amp;q=75   828w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fmetal-xag-usd.inline.svg&amp;w=1080&amp;q=75 1080w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fmetal-xag-usd.inline.svg&amp;w=1200&amp;q=75 1200w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fmetal-xag-usd.inline.svg&amp;w=1920&amp;q=75 1920w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fmetal-xag-usd.inline.svg&amp;w=2048&amp;q=75 2048w,
+                      https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fmetal-xag-usd.inline.svg&amp;w=3840&amp;q=75 3840w
+                    "
+                    src="https://pyth.network/_next/image?url=%2Ficons%2Fprice-feed-icons%2Flight%2Fmetal-xag-usd.inline.svg&amp;w=3840&amp;q=75"
+                    decoding="async"
+                    data-nimg="fill"
+                    style="
+                      position: absolute;
+                      inset: 0px;
+                      box-sizing: border-box;
+                      padding: 0px;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0px;
+                      height: 0px;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    "
+                /></span>
+              </div>
+              <div><span class="min-w-[72px]">XAG/USD</span></div>
+              <svg
+                width="14"
+                height="4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                class="ml-2 opacity-0 group-hover:opacity-100"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.772 0 14 2 9.772 4V2.346H0v-.692h9.772V0Z"
+                  fill="#E6DAFE"
+                ></path>
+              </svg>
+            </td>
+            <td
+              class="py-3 px-4 text-right align-middle font-light leading-none md:px-5 xl:px-8"
+            >
+              <span class="leading-none total-cap">$28.8825</span>
+            </td>
+            <td
+              class="py-3 pr-4 text-right align-middle text-xs md:pr-5 xl:pr-8"
+            >
+              <span
+                class="inline-flex items-center leading-none"
+                style="color: rgb(21, 174, 110)"
+                ><svg
+                  width="9"
+                  height="8"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="display: inline"
+                >
+                  <path
+                    d="M3.735 1.306a1 1 0 0 1 1.682 0L8.412 5.96A1 1 0 0 1 7.57 7.5H1.58A1 1 0 0 1 .74 5.959l2.995-4.653Z"
+                  ></path></svg><span class="pl-1 leading-none">9.57%</span></span
+              >
+            </td>
+            <td class="hidden pr-3 sm:table-cell md:pr-5">
+              <div
+                class="recharts-wrapper"
+                style="
+                  position: relative;
+                  cursor: pointer;
+                  width: 87px;
+                  height: 40px;
+                  margin: 0px auto;
+                "
+              >
+                <svg
+                  class="recharts-surface"
+                  width="87"
+                  height="40"
+                  viewBox="0 0 87 40"
+                  version="1.1"
+                >
+                  <defs>
+                    <clipPath id="recharts13-clip">
+                      <rect x="5" y="5" height="30" width="77"></rect>
+                    </clipPath>
+                  </defs>
+                  <g class="recharts-layer recharts-line">
+                    <path
+                      stroke="#15AE6E"
+                      stroke-width="1"
+                      fill="none"
+                      points="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+                      width="77"
+                      height="30"
+                      class="recharts-curve recharts-line-curve"
+                      type="monotone"
+                      d="M5,34.60940359700265C5.213888888888889,32.877291583904906,5.427777777777778,31.14517957080716,5.641666666666667,31.14517957080716C5.855555555555555,31.14517957080716,6.069444444444445,31.233167342094035,6.283333333333333,31.233167342094035C6.497222222222223,31.233167342094035,6.711111111111111,30.286836302642897,6.925000000000001,30.286836302642897C7.138888888888889,30.286836302642897,7.352777777777778,30.298273426344686,7.566666666666666,30.32114767374826C7.780555555555556,30.344021921151835,7.9944444444444445,31.088016134462112,8.208333333333334,31.088016134462112C8.422222222222222,31.088016134462112,8.636111111111113,30.662804016634393,8.850000000000001,30.407604875726754C9.06388888888889,30.152405734819116,9.277777777777779,29.556821289016284,9.491666666666667,29.556821289016284C9.705555555555556,29.556821289016284,9.919444444444444,29.59216191252616,10.133333333333333,29.662843159545904C10.347222222222221,29.73352440656565,10.561111111111112,32.48707182961394,10.775,32.949986971405856C10.988888888888889,33.412902113197774,11.20277777777778,33.36280147783537,11.416666666666668,33.644359684093736C11.630555555555556,33.9259178903521,11.844444444444445,34.639336208956074,12.058333333333334,34.639336208956074C12.272222222222222,34.639336208956074,12.486111111111112,34.33721513677148,12.700000000000001,33.7329729924023C12.91388888888889,33.12873084803312,13.127777777777778,24.872294317161774,13.341666666666667,24.619284555830085C13.555555555555555,24.36627479449839,13.769444444444446,24.239769913832546,13.983333333333334,24.239769913832546C14.197222222222223,24.239769913832546,14.411111111111111,24.761871505316307,14.625,25.047098641482112C14.838888888888889,25.33232577764792,15.052777777777779,25.88432892605563,15.266666666666667,25.951132730827386C15.480555555555556,26.01793653559914,15.694444444444446,26.051338437985017,15.908333333333335,26.051338437985017C16.122222222222224,26.051338437985017,16.336111111111112,25.721833484477955,16.55,25.5422977045998C16.76388888888889,25.362761924721646,16.97777777777778,24.974123758716093,17.19166666666667,24.974123758716093C17.40555555555556,24.974123758716093,17.619444444444447,25.00111501573773,17.833333333333336,25.00111501573773C18.047222222222224,25.00111501573773,18.261111111111113,24.96468746619724,18.475,24.96468746619724C18.68888888888889,24.96468746619724,18.90277777777778,25.568248618134987,19.116666666666667,26.081617091695158C19.330555555555556,26.594985565255328,19.544444444444444,28.044898307558267,19.758333333333333,28.044898307558267C19.97222222222222,28.044898307558267,20.186111111111114,27.046873953377396,20.400000000000002,27.046873953377396C20.61388888888889,27.046873953377396,20.82777777777778,29.91217955453734,21.041666666666668,29.91217955453734C21.255555555555556,29.91217955453734,21.469444444444445,26.067549163355956,21.683333333333334,26.067549163355956C21.897222222222222,26.067549163355956,22.111111111111114,26.442046199881524,22.325000000000003,26.442046199881524C22.53888888888889,26.442046199881524,22.75277777777778,26.313371903587225,22.96666666666667,26.056023310998626C23.180555555555557,25.798674718410027,23.394444444444446,24.808888819897998,23.608333333333334,24.808888819897998C23.822222222222223,24.808888819897998,24.03611111111111,24.90841797105697,24.25,24.95084579592976C24.46388888888889,24.993273620802547,24.67777777777778,25.063455769134727,24.89166666666667,25.063455769134727C25.105555555555558,25.063455769134727,25.319444444444446,24.582298015759548,25.533333333333335,24.582298015759548C25.747222222222224,24.582298015759548,25.961111111111112,24.727329439706487,26.175,24.727329439706487C26.38888888888889,24.727329439706487,26.60277777777778,23.984297932309058,26.81666666666667,23.984297932309058C27.03055555555556,23.984297932309058,27.244444444444447,24.35962014533135,27.458333333333336,24.35962014533135C27.672222222222224,24.35962014533135,27.886111111111113,23.62867348082133,28.1,23.62867348082133C28.31388888888889,23.62867348082133,28.52777777777778,25.16512549910911,28.741666666666667,25.16512549910911C28.955555555555556,25.16512549910911,29.169444444444448,24.92704877050833,29.383333333333336,24.92704877050833C29.597222222222225,24.92704877050833,29.811111111111114,25.411374136887066,30.025000000000002,25.411374136887066C30.23888888888889,25.411374136887066,30.45277777777778,24.017784126917714,30.666666666666668,24.017784126917714C30.880555555555556,24.017784126917714,31.09444444444445,24.28657871607368,31.308333333333337,24.28657871607368C31.522222222222226,24.28657871607368,31.736111111111114,23.495840028797595,31.950000000000003,23.15504879030321C32.16388888888889,22.814257551808822,32.37777777777778,22.576910616400017,32.59166666666667,22.241831285107367C32.80555555555556,21.906751953814716,33.019444444444446,21.144572802547305,33.233333333333334,21.144572802547305C33.44722222222222,21.144572802547305,33.66111111111111,21.918901124977413,33.875,22.19550161760632C34.08888888888889,22.472102110235223,34.30277777777778,22.80417575832074,34.516666666666666,22.80417575832074C34.730555555555554,22.80417575832074,34.94444444444444,22.370849404941996,35.15833333333333,22.01717032922741C35.37222222222222,21.66349125351282,35.586111111111116,20.682101304033203,35.800000000000004,20.682101304033203C36.01388888888889,20.682101304033203,36.22777777777778,20.7699249273073,36.44166666666667,20.945572173855492C36.65555555555556,21.121219420403683,36.86944444444445,24.222512190325933,37.083333333333336,24.52578673503284C37.297222222222224,24.829061279739744,37.51111111111111,24.980698552093195,37.725,24.980698552093195C37.93888888888889,24.980698552093195,38.15277777777778,23.926218372595358,38.36666666666667,23.457263027576147C38.580555555555556,22.988307682556936,38.794444444444444,22.426941442771128,39.00833333333333,22.16696648197794C39.22222222222222,21.90699152118475,39.43611111111112,22.036979001581347,39.650000000000006,21.777004040788157C39.863888888888894,21.51702907999497,40.07777777777778,20.611730607307898,40.29166666666667,20.595617483458067C40.50555555555556,20.579504359608237,40.71944444444445,20.587560921533154,40.93333333333334,20.571447797683323C41.147222222222226,20.555334673833492,41.361111111111114,20.330482951344006,41.575,20.330482951344006C41.78888888888889,20.330482951344006,42.00277777777778,20.536772639090152,42.21666666666667,20.618176744134427C42.43055555555556,20.6995808491787,42.644444444444446,20.68508702329284,42.858333333333334,20.818907581609665C43.07222222222222,20.95272813992649,43.28611111111111,22.333625515717834,43.5,22.333625515717834C43.71388888888889,22.333625515717834,43.927777777777784,21.405741163757828,44.14166666666667,21.146422795015763C44.35555555555556,20.8871044262737,44.56944444444445,20.88204023825756,44.78333333333334,20.75744524190267C44.99722222222223,20.63285024554778,45.211111111111116,20.567982943683667,45.425000000000004,20.39885281688641C45.63888888888889,20.229722690089154,45.85277777777778,19.74266448111913,46.06666666666667,19.74266448111913C46.28055555555556,19.74266448111913,46.49444444444445,20.53019784571309,46.708333333333336,20.608048368102146C46.922222222222224,20.685898890491202,47.13611111111111,20.646973629296674,47.35,20.72482415168573C47.56388888888889,20.802674674074787,47.77777777777778,21.389960772366322,47.99166666666667,21.596889306432484C48.205555555555556,21.803817840498645,48.41944444444445,21.966395356082696,48.63333333333334,21.966395356082696C48.84722222222223,21.966395356082696,49.06111111111112,21.346647879154297,49.275000000000006,21.346647879154297C49.488888888888894,21.346647879154297,49.70277777777778,21.395004996434942,49.91666666666667,21.491719230996228C50.13055555555556,21.588433465557515,50.34444444444445,21.68877226569847,50.55833333333334,22.082878335102954C50.772222222222226,22.476984404507437,50.986111111111114,25.592487068617785,51.2,25.592487068617785C51.41388888888889,25.592487068617785,51.62777777777778,19.657671301957436,51.84166666666667,19.657671301957436C52.05555555555556,19.657671301957436,52.269444444444446,21.116873934497608,52.483333333333334,21.584178926523382C52.69722222222222,22.051483918549163,52.91111111111112,22.361299983387266,53.12500000000001,22.461501254112086C53.338888888888896,22.561702524836907,53.552777777777784,22.611803160199315,53.76666666666667,22.611803160199315C53.98055555555556,22.611803160199315,54.19444444444445,22.117575675860024,54.40833333333334,22.117575675860024C54.62222222222223,22.117575675860024,54.836111111111116,24.672721388641573,55.050000000000004,24.672721388641573C55.26388888888889,24.672721388641573,55.47777777777778,24.472782454417224,55.69166666666667,24.31164012483683C55.90555555555556,24.150497795256438,56.11944444444445,23.705867411159208,56.333333333333336,23.705867411159208C56.547222222222224,23.705867411159208,56.76111111111111,24.164399357366428,56.975,24.164399357366428C57.18888888888889,24.164399357366428,57.402777777777786,23.87387068403086,57.616666666666674,23.87387068403086C57.83055555555556,23.87387068403086,58.04444444444445,24.64928371427516,58.25833333333334,24.64928371427516C58.47222222222223,24.64928371427516,58.68611111111112,23.888335673103633,58.900000000000006,23.62209868744423C59.113888888888894,23.355861701784825,59.32777777777778,23.225634654018215,59.54166666666667,23.051861800318743C59.75555555555556,22.878088946619272,59.96944444444445,22.579461565247392,60.18333333333334,22.579461565247392C60.397222222222226,22.579461565247392,60.611111111111114,22.967068260632075,60.825,22.967068260632075C61.03888888888889,22.967068260632075,61.25277777777778,22.644637199189585,61.46666666666667,22.644637199189585C61.68055555555556,22.644637199189585,61.89444444444445,23.98791806145597,62.10833333333334,23.98791806145597C62.32222222222223,23.98791806145597,62.53611111111112,23.607924284718433,62.75000000000001,23.607924284718433C62.963888888888896,23.607924284718433,63.177777777777784,23.894706390572935,63.39166666666667,23.989288919184375C63.60555555555556,24.08387144779581,63.81944444444444,24.17541945638706,64.03333333333333,24.17541945638706C64.24722222222222,24.17541945638706,64.46111111111112,22.877638648692287,64.67500000000001,22.876698124943353C64.8888888888889,22.87575760119442,65.10277777777777,22.876227863068888,65.31666666666666,22.875287339319954C65.53055555555555,22.87434681557102,65.74444444444445,22.32653609613854,65.95833333333334,22.129407642079073C66.17222222222223,21.93227918801961,66.38611111111112,21.692516614963154,66.60000000000001,21.692516614963154C66.8138888888889,21.692516614963154,67.02777777777779,24.034234419658716,67.24166666666667,24.034234419658716C67.45555555555556,24.034234419658716,67.66944444444445,24.03213155052192,67.88333333333334,24.027925812248334C68.09722222222223,24.023720073974747,68.31111111111112,23.22039522690738,68.525,22.67387772762969C68.7388888888889,22.127360228352,68.95277777777778,21.367232927244423,69.16666666666667,20.74882081658218C69.38055555555556,20.13040870591994,69.59444444444445,19.44172350005351,69.80833333333334,18.963405063656243C70.02222222222223,18.485086627258976,70.23611111111111,18.319013202645802,70.45,17.878910198198586C70.66388888888889,17.43880719375137,70.87777777777778,16.322787036972947,71.09166666666667,16.322787036972947C71.30555555555556,16.322787036972947,71.51944444444445,16.790768584997412,71.73333333333333,16.790768584997412C71.94722222222222,16.790768584997412,72.16111111111111,16.476997440337655,72.375,16.39276732761378C72.58888888888889,16.308537214889903,72.80277777777778,16.266422158527966,73.01666666666667,16.266422158527966C73.23055555555555,16.266422158527966,73.44444444444446,17.06444768664197,73.65833333333335,17.06444768664197C73.87222222222223,17.06444768664197,74.08611111111112,14.604183961684386,74.30000000000001,13.731706218689302C74.5138888888889,12.859228475694218,74.72777777777779,11.829581228671469,74.94166666666668,11.829581228671469C75.15555555555557,11.829581228671469,75.36944444444445,11.862242246783408,75.58333333333334,11.927564283007287C75.79722222222223,11.992886319231166,76.01111111111112,12.363763226609823,76.22500000000001,12.363763226609823C76.4388888888889,12.363763226609823,76.65277777777779,12.065004970470987,76.86666666666667,11.734406436284154C77.08055555555556,11.40380790209732,77.29444444444445,10.96594973263579,77.50833333333334,10.380172021488825C77.72222222222223,9.79439431034186,77.93611111111112,8.7162856898682,78.15,8.219740169402357C78.3638888888889,7.723194648936512,78.57777777777778,7.4474015870731645,78.79166666666667,7.400898898693758C79.00555555555556,7.354396210314352,79.21944444444445,7.331144866124649,79.43333333333334,7.331144866124649C79.64722222222223,7.331144866124649,79.86111111111111,7.352688183694816,80.075,7.395774818835151C80.28888888888889,7.438861453975486,80.50277777777778,9.355941658888085,80.71666666666667,9.355941658888085C80.93055555555556,9.355941658888085,81.14444444444445,8.677566722797815,81.35833333333333,8.016626967525278C81.57222222222222,7.355687212252741,81.78611111111111,6.372995169752804,82,5.390303127252866"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a
+        class="block border border-t-0 border-beige-100 bg-gray-table-dark1 px-8 py-3 text-right text-base bg-gray-table-dark"
+        href="/price-feeds"
+        ><span
+          class="flex items-center justify-end text-xs opacity-50 transition-opacity hover:opacity-100 text-gray-soft hover:text-gray-soft/70"
+          >see all prices
+          <svg
+            width="14"
+            height="4"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            class="ml-2"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.772 0 14 2 9.772 4V2.346H0v-.692h9.772V0Z"
+              fill="#E6DAFE"
+            ></path></svg></span
+      ></a>
+    </div>
+  </div>
+</template>
+
+<style lang="postcss">
+.total-cap {
+    @apply text-xs md:text-sm lg:text-xl
+}
+
+</style>

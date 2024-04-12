@@ -19,7 +19,15 @@ export default {
           deep: '#110F23'
         },
         gray: {
-          soft: '#E6DAFE'
+          soft: '#E6DAFE',
+          table: {
+            dark: '#252236',
+            light: '#313147'
+          }
+        },
+        beige: {
+          "100": 'rgba(229,231,235,.1)',
+          "200": 'rgba(229,231,235,.2)'
         }
       }
     }

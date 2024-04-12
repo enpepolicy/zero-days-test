@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class="w-full justify-center flex">
     <Hero />
   </div>
 </template>

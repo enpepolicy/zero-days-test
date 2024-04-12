@@ -1,9 +1,8 @@
 <template>
   <div
-    ref="container"
-    class="container z-10 flex flex-col items-center justify-between pb-20 pt-28 lg:flex-row lg:items-start max-w-[1380px] gap-8"
+    class="w-full z-10 flex flex-col items-center justify-between pb-20 pt-28 lg:flex-row lg:items-start max-w-7xl gap-8 lg:gap-x-24 "
   >
-    <div class="left-panel py-10 text-gray-soft text-center lg:text-left w-full bg-red-500/30">
+    <div class="left-panel py-10 text-gray-soft text-center lg:text-left w-full max-w-lg">
       <div class="text-[14px] tracking-[7px] opacity-50 mb-6">
         BLOCKCHAIN ORACLE FOR MARKET DATA
       </div>
@@ -35,14 +34,16 @@
       </div>
     </div>
     <div
-      class="bg-blue-500/40 font-red-hat-display text-xl w-full border border-beige-100 bg-darkGray h-56"
+      class="font-red-hat-display text-xl w-full px-4"
     >
-      Box
+      <StatsTable />
     </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import StatsTable from './Table.vue'
+</script>
 
 <style scoped lang="postcss">
 .btn {
