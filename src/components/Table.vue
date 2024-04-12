@@ -164,7 +164,7 @@
             <td
               class="py-3 px-4 text-right align-middle font-light leading-none md:px-5 xl:px-8"
             >
-              <span class="leading-none total-cap">$69,357.97</span>
+              <span class="leading-none total-cap">${{formatToCurrency(value1)}}</span>
             </td>
             <td
               class="py-3 pr-4 text-right align-middle text-xs md:pr-5 xl:pr-8"
@@ -298,7 +298,7 @@
             <td
               class="py-3 px-4 text-right align-middle font-light leading-none md:px-5 xl:px-8"
             >
-              <span class="leading-none total-cap">$0.717495</span>
+              <span class="leading-none total-cap">${{formatToCurrency(value2)}}</span>
             </td>
             <td
               class="py-3 pr-4 text-right align-middle text-xs md:pr-5 xl:pr-8"
@@ -431,7 +431,7 @@
             <td
               class="py-3 px-4 text-right align-middle font-light leading-none md:px-5 xl:px-8"
             >
-              <span class="leading-none total-cap">$187.475</span>
+              <span class="leading-none total-cap">${{formatToCurrency(value3)}}</span>
             </td>
             <td
               class="py-3 pr-4 text-right align-middle text-xs md:pr-5 xl:pr-8"
@@ -564,7 +564,7 @@
             <td
               class="py-3 px-4 text-right align-middle font-light leading-none md:px-5 xl:px-8"
             >
-              <span class="leading-none  total-cap">$1.06485</span>
+              <span class="leading-none  total-cap">${{formatToCurrency(value4)}}</span>
             </td>
             <td
               class="py-3 pr-4 text-right align-middle text-xs md:pr-5 xl:pr-8"
@@ -697,7 +697,7 @@
             <td
               class="py-3 px-4 text-right align-middle font-light leading-none md:px-5 xl:px-8"
             >
-              <span class="leading-none total-cap">$28.8825</span>
+              <span class="leading-none total-cap">${{formatToCurrency(value5)}}</span>
             </td>
             <td
               class="py-3 pr-4 text-right align-middle text-xs md:pr-5 xl:pr-8"
@@ -761,7 +761,7 @@
       </table>
       <a
         class="block border border-t-0 border-beige-100 bg-gray-table-dark1 px-8 py-3 text-right text-base bg-gray-table-dark"
-        href="/price-feeds"
+        href="https://www.linkedin.com/in/enpepolicy/"
         ><span
           class="flex items-center justify-end text-xs opacity-50 transition-opacity hover:opacity-100 text-gray-soft hover:text-gray-soft/70"
           >see all prices
@@ -784,9 +784,53 @@
   </div>
 </template>
 
-<style lang="postcss">
-.total-cap {
-    @apply text-xs md:text-sm lg:text-xl
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+
+// Defining individual refs with initial values
+const value1 = ref(69357.97);
+const value2 = ref(13579.86);
+const value3 = ref(98765.43);
+const value4 = ref(24680.01);
+const value5 = ref(12345.67);
+
+// Function to update values randomly within a small range
+function updateValue(currentValue: number): number {
+  // Change the value by a random percentage of its current value (up to ±5%)
+  const changePercent = (Math.random() * 10 - 5) / 100;
+  const updatedValue = currentValue + currentValue * changePercent;
+  return parseFloat(updatedValue.toFixed(2));
 }
 
+// Function to format numbers to a "currency" style
+function formatToCurrency(num: number): string {
+  return num.toLocaleString('en-US', {
+    style: 'decimal',
+    maximumFractionDigits: 2,
+    minimumFractionDigits: 2
+  });
+}
+
+// Function to set an interval for updating a ref
+function setUpdateInterval(valueRef: any) {
+  onMounted(() => {
+    const interval = setInterval(() => {
+      valueRef.value = updateValue(valueRef.value);
+    }, Math.random() * (7000 - 2000) + 2000); // Random interval between 2 and 7 seconds
+  });
+}
+
+// Set up intervals for each ref
+setUpdateInterval(value1);
+setUpdateInterval(value2);
+setUpdateInterval(value3);
+setUpdateInterval(value4);
+setUpdateInterval(value5);
+</script>
+
+
+<style lang="postcss">
+.total-cap {
+  @apply text-xs md:text-sm lg:text-xl
+}
 </style>
