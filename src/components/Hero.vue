@@ -12,7 +12,7 @@
         Smarter Data for <br />
         <span class="font-semibold"> Smarter Contracts </span>
       </h1>
-      <div class="text-base px-4 pb-7 body-paragraph">
+      <div class="text-base px-4 lg:px-0 pb-7 body-paragraph">
         Secure your smart contracts with reliable, low-latency market data from
         institutional sources. Build apps with high-fidelity oracle feeds
         designed for mission-critical systems.
