@@ -5,14 +5,12 @@ This repository contains a web application developed with Vue 3 and Vite, showca
 
 ## Project Overview
 
-The application is designed to demonstrate advanced Vue 3 features, state management with Vuex, and routing with Vue Router. This setup represents my ongoing efforts to apply cutting-edge technologies in real-world scenarios, ensuring high performance and enhanced UX/UI.
+The application is designed to demonstrate advanced Vue 3 features. This setup represents my ongoing efforts to apply cutting-edge technologies in real-world scenarios, ensuring high performance and enhanced UX/UI.
 
 ## Technology Stack
 
 - **Frontend**: Vue 3, TypeScript, Vite, Vuex, Vue Router
 - **Styling**: Tailwind CSS
-- **Backend**: Node.js (Express), integrated with RESTful APIs
-- **Database**: MongoDB for data persistence
 
 ## Installation
 
@@ -36,7 +34,6 @@ The application is designed to demonstrate advanced Vue 3 features, state manage
 ## Features
 
 - **Dynamic User Interface**: Fluid and responsive user interfaces using Vue 3.
-- **State Management**: Vuex for global state management.
 - **Routing**: SPA behavior with Vue Router.
 - **API Integration**: Demonstrates integration with external APIs using Axios.
 
@@ -44,8 +41,6 @@ The application is designed to demonstrate advanced Vue 3 features, state manage
 
 - `/src`: Source files for the application.
   - `/components`: Reusable Vue components.
-  - `/store`: Vuex store modules.
-  - `/views`: Router views.
 - `/public`: Static assets like images and fonts.
 - `vite.config.js`: Configuration for Vite.
 
